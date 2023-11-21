@@ -38,7 +38,7 @@ The development version of the package may also be downloaded using devtools. Th
 
 ```r
 library(devtools)
-install_github("WallFacer/Autotuner")
+install_github("WallFacerLR/Autotuner")
 ```
 
 ## Using AutoTuner
