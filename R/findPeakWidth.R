@@ -181,6 +181,11 @@ findPeakWidth <- function(approvScorePeaks,
 
             rtUpper <- header$retentionTime[grep(upperString,header$spectrumId)]
             rtLower <- header$retentionTime[grep(lowerString,header$spectrumId)]
+           ### edit by LR 2023.11.12
+            rtUpper <- header$retentionTime[header$spIdx==checkThisBound$upperBound]
+            rtLower <- header$retentionTime[header$spIdx==checkThisBound$lowerBound]
+
+
             maxPw <- rtUpper - rtLower
             if(length(maxPw) == 0) {
                 stop("maxPw length is zero. Check how scans are being matched.")
